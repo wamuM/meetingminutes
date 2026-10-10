@@ -1,0 +1,108 @@
+\documentclass[language=english]{meetingminutes}
+% Options:
+%   language=english | catalan | spanish
+%   novotechecks  (disables vote count vs. attendee count validation)
+%   agenda        (generates an interactive agenda checklist document)
+%   nosort        (disables alphabetical sorting globally)
+%   nohierarchy   (flattens the attendee table without prioritizing roles)
+
+% ============================================================
+% Institution & Header Setup
+% ============================================================
+% \headerlogo{logo.png} % Path to header logo image
+\institution{SuperTuxKart Racing Association}
+\department{Mascot Grand Prix Committee}
+
+% ============================================================
+% Meeting Metadata
+% ============================================================
+\title{Annual Track \& Rules Conference}
+\type{BoardMeeting} % Built-in types: BoardMeeting, GeneralAssembly, ExtraordinaryGeneralAssembly, or custom string
+\date{October 10, 2026}
+\location{Grand Prix Clubhouse / Mascot Kingdom}
+\starttime{10:00 AM}
+\endtime{12:30 PM}
+
+% ============================================================
+% Attendees & Roles
+% ============================================================
+% Built-in key roles (chair, secretary, treasurer) are localized automatically.
+\attendee[chair]{Tux}
+\attendee[secretary]{Konqi}
+\attendee[treasurer]{Gnumeric}
+
+% Custom roles and regular attendees:
+\attendee[Track Safety Lead]{Suzanne}
+\attendee{Kiki}
+
+% ============================================================
+% Guests
+% ============================================================
+% Guests are sorted by affiliation first, then by name.
+\guest[Rival Racing Team]{Nolok}
+\guest[BSD Observer]{Puffy}
+\guest{Adiumy} % Guest without affiliation
+
+\begin{document}
+
+% Render title block, metadata, attendees, guests, and generated agenda
+\maketitle
+
+% ============================================================
+% Meeting Minutes Body
+% ============================================================
+
+\agendaitem{Opening and Approval of the Agenda}
+
+The meeting was called to order at 10:00 AM by the Chair, \chair. 
+The Secretary, \secretary, confirmed that a quorum was present with all mascot members attending: \everyone.
+
+The agenda was reviewed and approved without amendments.
+
+\agendaitem{Approval of Previous Race Minutes}
+
+The minutes of the previous Grand Prix council meeting were reviewed.
+
+\vote{Approval of Q2 Race Results}
+  {Gnumeric; Kiki; Konqi; Tux} % In favour (4)
+  {}                            % Against (0)
+  {Suzanne}                     % Abstentions (1)
+
+\agendaitem{Financial Report \& Nitro Supply Allocation}
+
+The Treasurer, \treasurer, presented the financial summary for Q3 and proposed the Nitro canister budget allocation for the upcoming championship.
+
+\task[2026-10-25]{\treasurer}{Publish detailed Q3 Nitro expense breakdown to the mascot portal.}
+
+An anonymous vote was conducted regarding the approval of the proposed track expansion budget.
+
+\anonymousvote{Approval of New Track Expansion}
+  {4} % In favour
+  {1} % Against
+  {0} % Abstention
+
+\agendaitem{Election of Grand Prix Safety Director}
+
+The council held an election to appoint the Safety Director for the upcoming Grand Prix season.
+
+\election{Selection of Safety Director}
+  {
+    \electionoption{Suzanne}{Gnumeric; Konqi; Tux}
+    \electionoption{Kiki}{Suzanne}
+    \abstention{Kiki}
+  }
+
+\task[2026-11-01]{Suzanne}{Draft the updated Grand Prix track safety regulations and schedule inspects.}
+
+\agendaitem{Any Other Business \& Adjournment}
+
+No further business was raised. The meeting was adjourned at 12:30 PM by \chair.
+
+% ============================================================
+% Task Summary Page
+% ============================================================
+
+% Generates a standalone table page listing all recorded tasks
+\printtasks
+
+\end{document}

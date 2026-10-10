@@ -1,0 +1,57 @@
+\documentclass[]{meetingminutes}
+% Options:
+%   language=catalan | spanish | english
+%   novotechecks  (disables vote count vs. attendee count validation)
+%   agenda        (generates an interactive agenda checklist document)
+%   nosort        (disables alphabetical sorting globally)
+%   nohierarchy   (flattens the attendee table without prioritizing roles)
+
+% Font Package
+\RequirePackage{tgheros}
+\renewcommand{\familydefault}{\sfdefault}
+
+% ==== Institution Metadata ===== 
+\institution{LinuxUPC}
+\department{Secretaría}
+\headerlogo{./linux_logo.jpg}
+
+% ==== Meeting Metadata ===== 
+\title{TITOL}
+\type{TIPUS_DE_REUNIO}
+% Possible Types are:
+% - GeneralAssembly  - BoardMeeting  - ExtraordinaryGeneralAssembly
+
+\date{DATA}
+\location{Despatx (A3S105)}
+\starttime{START}
+\endtime{END}
+
+% ==== Attendees & Guests ===== 
+% \attendee[chair]{Marcel Mula Tixier}
+% \attendee[secretary]{Cristina Frias}
+% \attendee[treasurer]{Chentao Chen}
+% \attendee{Joan Jose}
+
+% \guest[Afiliación]{Pepito Palotes}
+
+\begin{document}
+\maketitle
+
+\agendaitem{Item 1}
+\agendaitem{Item 2}
+\agendaitem{Item 3}
+
+\printtasks 
+\end{document}
+
+% Chuleta Bloques Especiales (v3.0)
+% =================================
+% IMPORTANTE: Las listas de personas en votaciones usan punto y coma (;) como separador.
+%
+% \vote{mocion}{lista a favor; ...}{lista en contra; ...}{lista abstencion; ...}  (¡Los guests no votan!)
+% \anonymousvote{mocion}{cuantos a favor}{cuantos en contra}{cuantos abstencion}
+% \election{mocion}{
+%        \electionoption{opcion}{lista de votantes; ...}
+%        \abstention{lista de abstenciones; ...}
+% }
+% \task[fecha_opcional]{responsable}{tarea}
